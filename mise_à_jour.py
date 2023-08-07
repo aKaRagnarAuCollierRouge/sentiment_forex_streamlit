@@ -6,7 +6,7 @@ import locale
 from récupération_données import *
 import datetime
 # Définir le local sur 'fr_FR.UTF-8' pour la France
-locale.setlocale(locale.LC_TIME, 'fr_FR.UTF-8')
+#locale.setlocale(locale.LC_TIME, 'fr_FR.UTF-8')
 
 
 # Fonction pour ajouter les nouvelles données dans la base de données
