@@ -5,6 +5,7 @@ import locale
 import locale
 from récupération_données import *
 import datetime
+import pytz
 # Définir le local sur 'fr_FR.UTF-8' pour la France
 #locale.setlocale(locale.LC_TIME, 'fr_FR.UTF-8')
 
@@ -12,7 +13,8 @@ import datetime
 # Fonction pour ajouter les nouvelles données dans la base de données
 def ajouter_donnees():
     # Vérifier si l'heure actuelle est entre vendredi 23:00 et dimanche 23:00
-    date_heure_now = datetime.datetime.now()
+    france_timezone = pytz.timezone('Europe/Paris')
+    date_heure_now = datetime.datetime.now(france_timezone)
 
     # Vérifier si l'heure actuelle est entre vendredi 23:00 et dimanche 23:00
     if date_heure_now.weekday() == 4 and date_heure_now.hour >= 23:
